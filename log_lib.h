@@ -17,7 +17,7 @@
 // для использования при аварийных ситуациях (например malloc, вернувший NULL)
 #define log_emerg_sit(...) log_message(LOG_MES_EMERG_SIT, __FILE__, __LINE__, ##__VA_ARGS__)
 
-void log_init();
+void log_init(char *file_name);
 void log_message(int level, const char *file, int line, const char* message, ...);
 void log_close();
 
