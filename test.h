@@ -1,11 +1,9 @@
 #ifndef TEST_H
 #define TEST_H
 
-#define STR_SIZE 50
-
-void test_f(char *str);
-void test_fun(char *str);
-void test_funct(char *str);
-void test_function(char *str);
+void test_f();
+void test_fun();
+void test_funct();
+void test_function();
 
 #endif  /* TEST_H */
