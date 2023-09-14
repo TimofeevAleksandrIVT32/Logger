@@ -9,7 +9,6 @@
 // объявляем макросы здесь, чтобы они не были доступны пользователям библиотеки
 #define BUF_SIZE 100
 #define LEVEL_MAX_SIZE 10
-#define STR_SIZE 50
 
 // объявляем функции и переменную как static, чтобы они не были доступны пользователям библиотеки
 static void select_level(char *l, int level);
@@ -18,10 +17,7 @@ static void get_call_stack(int level);
 static FILE *log_file;
 
 // функция инициализации
-void log_init() {
-    char file_name[STR_SIZE];
-    printf("Enter the name of the log file\n");
-    scanf("%49s", file_name);
+void log_init(char *file_name) {
     log_file = fopen(file_name, "a");
     if (!log_file) {
         perror("Failed to open file");
